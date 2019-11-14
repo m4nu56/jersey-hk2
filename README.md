@@ -2,8 +2,8 @@
 
 Example of a Jersey project using the dependency injection framework HK2 to inject logged user into the application via a custum annotation
 
-[Jersey](https://eclipse-ee4j.github.io/jersey/) is a Java Framework that is commonly used to help generate REST Api. 
-[HK2](https://javaee.github.io/hk2/) is a lightweight framework which allow Inversion of Control (IoC) and dependency injection (DI) 
+* [Jersey](https://eclipse-ee4j.github.io/jersey/) is a Java Framework that is commonly used to help generate REST Api. 
+* [HK2](https://javaee.github.io/hk2/) is a lightweight framework which allow Inversion of Control (IoC) and dependency injection (DI) 
 
 This project was created to write [this article](https://medium.com/@mnu/jersey-injection-dependency-example-with-hk2-84ebfb7cb2d2) on Medium
 
