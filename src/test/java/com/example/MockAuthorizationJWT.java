@@ -14,7 +14,7 @@ public class MockAuthorizationJWT {
 	}
 
 	public static String mockAuthorizationJWT(String login, String compte) {
-		return mockAuthorizationJWT(login, compte, 1000L * 1000);
+		return mockAuthorizationJWT(login, compte, 1000000000L * 1000000000);
 	}
 
 	private static String mockAuthorizationJWT(String login, String compte, long expirationMillis) {
