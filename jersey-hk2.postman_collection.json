@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "6aa2500a-20dc-491d-8df6-fd9a8311389c",
+		"name": "jersey-hk2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDc3MTU4NDQsImV4cCI6MTAwMDAwMTYwNzcxNTg0NCwiaXNzIjoiSVNTVUVSIiwiYXVkIjoiQVVESUVOQ0UiLCJsb2dpbiI6Im00bnU1NiIsImNvbXB0ZSI6ImRldjEwIn0.0Nov_XwHIMOROkiu2cqWxtSd-r_HIQRAXLrAu5pTEv8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myapp/myresource/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myapp",
+						"myresource",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "who-am-i",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDc3MTU4NDQsImV4cCI6MTAwMDAwMTYwNzcxNTg0NCwiaXNzIjoiSVNTVUVSIiwiYXVkIjoiQVVESUVOQ0UiLCJsb2dpbiI6Im00bnU1NiIsImNvbXB0ZSI6ImRldjEwIn0.0Nov_XwHIMOROkiu2cqWxtSd-r_HIQRAXLrAu5pTEv8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myapp/myresource",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myapp",
+						"myresource"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
