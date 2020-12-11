@@ -11,7 +11,7 @@ import javax.ws.rs.core.SecurityContext;
 
 public class CurrentUserInjectionResolver implements InjectionResolver<CurrentUser> {
 
-	private javax.inject.Provider<SecurityContext> securityContextProvider;
+	private final javax.inject.Provider<SecurityContext> securityContextProvider;
 
 	@Inject
 	public CurrentUserInjectionResolver(

@@ -20,7 +20,7 @@ public class MyResourceTest {
     private WebTarget target;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         // start the server
         server = Main.startServer();
         // create the client
@@ -36,7 +36,7 @@ public class MyResourceTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         server.stop();
     }
 
@@ -45,10 +45,12 @@ public class MyResourceTest {
      */
     @Test
     public void testWhoAmI() {
-        User user = target
+		String token = MockAuthorizationJWT.mockAuthorizationJWT("m4nu56", "dev10");
+		System.out.println(token);
+		User user = target
                 .path("myresource")
                 .request()
-                .header("Authorization", MockAuthorizationJWT.mockAuthorizationJWT("m4nu56", "dev10"))
+                .header("Authorization", token)
                 .get(User.class);
         assertEquals("m4nu56", user.getLogin());
     }
