@@ -7,6 +7,40 @@ Example of a Jersey project using the dependency injection framework HK2 to inje
 
 This project was created to write [this article](https://medium.com/@mnu/jersey-injection-dependency-example-with-hk2-84ebfb7cb2d2) on Medium
 
+## TLDR
+
+To start the project, run the server in the Main.java class and hit it on 
+
+```bash
+curl -X GET \
+  http://localhost:8080/myapp/myresource \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDc3MTU4NDQsImV4cCI6MTAwMDAwMTYwNzcxNTg0NCwiaXNzIjoiSVNTVUVSIiwiYXVkIjoiQVVESUVOQ0UiLCJsb2dpbiI6Im00bnU1NiIsImNvbXB0ZSI6ImRldjEwIn0.0Nov_XwHIMOROkiu2cqWxtSd-r_HIQRAXLrAu5pTEv8,Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDc3MTU4NDQsImV4cCI6MTAwMDAwMTYwNzcxNTg0NCwiaXNzIjoiSVNTVUVSIiwiYXVkIjoiQVVESUVOQ0UiLCJsb2dpbiI6Im00bnU1NiIsImNvbXB0ZSI6ImRldjEwIn0.0Nov_XwHIMOROkiu2cqWxtSd-r_HIQRAXLrAu5pTEv8' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: localhost:8080' \
+  -H 'cache-control: no-cache'
+```
+
+> Return the user found in the JWT Token payload
+
+```bash
+curl -X GET \
+  http://localhost:8080/myapp/myresource/users \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDc3MTU4NDQsImV4cCI6MTAwMDAwMTYwNzcxNTg0NCwiaXNzIjoiSVNTVUVSIiwiYXVkIjoiQVVESUVOQ0UiLCJsb2dpbiI6Im00bnU1NiIsImNvbXB0ZSI6ImRldjEwIn0.0Nov_XwHIMOROkiu2cqWxtSd-r_HIQRAXLrAu5pTEv8,Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDc3MTU4NDQsImV4cCI6MTAwMDAwMTYwNzcxNTg0NCwiaXNzIjoiSVNTVUVSIiwiYXVkIjoiQVVESUVOQ0UiLCJsb2dpbiI6Im00bnU1NiIsImNvbXB0ZSI6ImRldjEwIn0.0Nov_XwHIMOROkiu2cqWxtSd-r_HIQRAXLrAu5pTEv8' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: localhost:8080' \
+  -H 'cache-control: no-cache'
+```
+
+> Returns the list of users
+
+Or use the Postman collection in `jersey-hk2.postman_collection.json`
+
 ## Step 1 
 
 Generate a project from [Maven Archetype](https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest/getting-started.html#new-from-archetype):
